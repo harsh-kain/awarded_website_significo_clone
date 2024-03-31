@@ -1,0 +1,90 @@
+:root{
+    --salmon: #EF9d71;
+    --black: #000;
+    --white: #fff;
+    --cyan: #AEDEE0;
+    --dsalmon : #532521;
+    --dcyan: #1f2f32;
+}
+
+*{
+
+    font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+.animate-spin-500ms {
+    animation: spin 8000ms linear infinite;
+}
+.hoverDiv:hover a {
+    transition: .2s all ease-in-out;
+    transform: translateY(-100%);
+}
+
+.hideNav{
+    transform: translateY(-100%);
+}
+
+.mobileNav{
+    transition: .1s all ease-in-out;
+    background-color: black!important;
+    /* height: 100vh; */
+    color: white !important;
+    /* opacity: 0; */
+}
+*::selection{
+    background-color: var(--salmon);
+    color: var(--white);
+}
+
+body{
+    transition: background-color ease-out .5s;
+}
+body[theme = "black"]{
+    background-color: var(--black);
+}
+
+body[theme = "black"] .section{
+    color: var(--white);
+}
+
+
+body[theme = "cyan"]{
+    background-color: var(--cyan);
+}
+
+body[theme = "cyan"] .section{
+    color: var(--dcyan);
+}
+
+
+body[theme = "salmon"]{
+    background-color: var(--salmon);
+}
+
+
+body[theme = "salmon"] .section{
+    color: var(--dsalmon);
+}
+
+body[theme = "white"]{
+    background-color: var(--white);
+}
+
+body[theme = "white"] .section{
+    color: var(--black);
+}
+
+
+.videodiv{
+    clip-path: circle(var(--clip) at 50% 50%);
+}
